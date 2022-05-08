@@ -1,0 +1,212 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    position:relative;
+    min-height: 100vh;
+    width:100%;
+    background: #DAB4FF;
+    overflow:hidden;
+}
+/* Header */
+.header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    /* padding-top: 30px; */
+    background-color: #6966FD;
+}
+
+.header-icono{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+.header-icono h1{
+    font-size: 25px;
+}
+.header-icono i:hover{
+    cursor: pointer;
+}
+#buscar{
+    height: 45px;
+    width: 500px;
+    background: #9795FE;
+    border-radius: 43px;
+    font-size: 20px;
+    color:#fff ;
+    text-indent: 10px;
+    background-clip: padding-box;
+    border: 1px solid #9795FE;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.avatar{
+    width: 40px;
+    height: 40px;
+    background-color: aquamarine;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+.sidebar{
+    position: fixed;
+    top:70px;
+    left:0;
+    height:100%;
+    width:78px;
+    background:#ffff;
+    padding:6px 14px;
+     transition: all 0.5s ease; 
+     margin: 0;
+}
+
+.sidebar.active{
+    width: 250px;
+}
+
+
+#btn{
+    font-size: 30px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+    height:50px;
+    width:50px;
+    text-align:center;
+    line-height: 50px;
+}
+
+.sidebar ul{
+    padding-top:20px;
+}
+.sidebar ul li{
+    position:relative;
+    height: 70px;
+    width:100%;
+    margin: 4px;
+    list-style: none;
+    line-height: 50px;
+}
+
+
+.sidebar ul li a{
+  display:flex;
+  align-items: center;
+  text-decoration:none;
+  transition: all 0.4s ease;
+  border-radius:50px;
+  white-space: nowrap;
+}
+
+
+.sidebar ul li a span{
+    color:#000;
+}
+
+.sidebar ul li a i{
+    color:#6966FD;
+    font-size: 20px;
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+}
+ .sidebar .links_name{
+
+    opacity:0;
+
+    pointer-events: none;
+}
+.sidebar.active .links_name{
+    opacity: 1;
+    pointer-events: auto;
+}  
+.sidebar ul li a:hover{
+    color:#000 ;
+    background-color: #E5CBFF;
+}
+
+.sidebar ul li a:hover i{
+    color:#000 ;
+}
+
+.contenido{
+    position: absolute;
+    width:calc(100% - 78px);
+    left: 78px;
+    height: 100vh;
+    transition: all 0.5s ease;
+    margin:50px 0 30px 30px;
+}
+
+.sidebar.active ~ .contenido{
+    width:calc(100% - 260px);
+    left: 260px;
+}
+
+.onda{
+    
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 60%;
+    bottom: 0%;
+}
+/*MEDIAS QUERIES*/
+
+/*TELEFONOS INTELIGENTES*/
+@media(max-width:768px){
+      #buscar{
+        height: 32px;
+       width: 170px;
+       }
+    
+        #btn{
+            font-size: 20px;
+        }
+    
+        .header-icono h1 {
+            font-size: 20px;
+        }
+    
+        .avatar{
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+    
+        .sidebar ul li {
+            font-size: 12px;
+        
+       }
+    
+        .sidebar ul li a i {
+        text-align: -webkit-left;
+    
+        }
+        .sidebar.active {
+            width: 185px;
+        }
+    
+        .sidebar {
+        width: 60px;
+        }
+        .contenido{
+            position: absolute;
+            width:calc(100% - 60px);
+            left: 60px;
+            height: 100vh;
+            transition: all 0.5s ease;
+        }
+        
+        .sidebar.active ~ .contenido{
+            width:calc(100% - 185px);
+            left: 185px;
+        }
+    }
