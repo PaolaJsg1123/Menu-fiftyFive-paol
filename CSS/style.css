@@ -146,7 +146,7 @@ body{
 .sidebar ul li a:hover i{
     color:#000 ;
 }
-
+/* Contenido */
 .contenido{
     position: absolute;
     width:calc(100% - 90px);
@@ -166,21 +166,8 @@ body{
     width:calc(100% - 260px);
     left: 260px;
 }
- /* .onda{
-    position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 60%;
-    bottom: 0%;
-    margin:0;
-    padding:0;
-    /* /* height:70px;  
-    font-size:10px;
-}   */
-svg{
-    margin:0;
-    padding:0;
-}
+
+/*  Inicio*/
 .entradas{
     display: grid;
     grid-template-columns: 50% 45%;
@@ -203,6 +190,7 @@ svg{
     color:#fff;
 }
 
+/* Archivados */
 .text-archivos{
     color:#E5CBFF;
     display: flex;
