@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+
+  
+  
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8aca401b21.js" crossorigin="anonymous"></script>
+
+ 
+
+   
+</head>
+<body >
+    <header class="header">
+        <div class="header-icono">
+            <i class="fas fa-bars" id="btn"></i>
+            <h1>Fifty Five</h1>
+        </div>
+            <input type="search" name="buscar" id="buscar" placeholder="Buscar...">
+           
+        <div class="avatar">
+        </div>
+    </header>
+    <div class="sidebar active">
+        <ul class="nav_list">
+            <li>
+                <!-- Inicio -->
+                <a href="#">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="links_name">Inicio</span>
+                </a>
+            </li>
+
+            <li>
+                <!-- Tareas -->
+                <a href="./tareas.html">
+                    <i class="fa-solid fa-book"></i>
+                    <span class="links_name">Tareas</span>
+                </a>
+              
+            </li>
+
+            <li>
+                <!-- Archivados -->
+                <a href="#">
+                    <i class="fa-solid fa-box-archive"></i>
+                    <span class="links_name">Archivados</span>
+                </a>
+             
+            </li>
+
+            <li>
+                <!-- Papelera -->
+                <a href="./papelera.html">
+                    <i class="fa-solid fa-trash"></i>
+                    <span class="links_name">Papelera</span>
+                </a>
+              
+            </li>
+
+            <li>
+                <!-- Datos personales -->
+                <a href="./DatosPersonales.html">
+                    <i class="fa-solid fa-user"></i>
+                    <span class="links_name">Datos personales</span>
+                </a>
+              
+            </li>
+        </ul>
+    </div>
+
+    <div class="contenedor-tareas">
+
+        <div  >
+
+           <button class="boton-crear-tarea"  id="abrir" >Crear Tarea</button> <br>
+           <button class="boton-crear-nota"  id="abrir2" >Crear anotación</button>
+
+        </div>
+    </div>
+
+   
+
+   
+<!--MODAL PARA CREAR TAREA-->
+    
+        <div id="miModal" class="modal">
+        <div class="flex" id="flex">
+            <div class="contenido-modal">
+                <div class="modal-header flex">
+                    
+                    <span class="close" id="close"> Cerrar</span>
+                </div>
+                <div class="modal-body">
+
+                    <form method="post">
+                        <input id="input-titulo-tarea" placeholder="Titulo de la tarea" type="text" required="required" ><br>
+                        <label for="mensaje"> <strong>Descripción</strong> </label>     <br>
+                        <textarea  required="required" name="mensaje" id="mensaje" cols="55" rows="10"></textarea>  <br>
+
+                        <label for="fecha"> <strong>Fecha</strong> </label><br>
+
+<input required="required" type="date" id="fecha" name="fecha"
+      
+       min="2022-01-01" max="3000-01-01"> <br>
+
+       <label for="color"> <strong>Color</strong> </label><br>
+
+<select required="required" name="color" id="color">
+
+  <option value="verde">Verde</option>
+  <option value="amarillo">Amarillo</option>
+  <option value="rojo">Rojo</option>
+  
+</select> <br> <br>
+                        <input class="submit-notas"  type="submit"  value="Guardar ">
+                    </form>
+
+                            
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!--MODAL PARA CREAR NOTA-->
+
+    <div id="miModal2" class="modal">
+        <div class="flex" id="flex2">
+            <div class="contenido-modal">
+                <div class="modal-header flex">
+                    
+                    <span class="close" id="close2"> Cerrar</span>
+                </div>
+                <div class="modal-body">
+<form method="post">
+    <label for="mensaje"> <strong>Nota</strong> </label>        <br>
+                    <textarea  required="required" name="mensaje" id="mensaje" cols="55" rows="10"></textarea>  <br>
+                    <input class="submit-notas"  type="submit"  value="Guardar ">
+
+</form>
+
+                
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    
+    
+
+   
+  <script src="script.js"></script>
+</body>
+</html>
